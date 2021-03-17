@@ -129,8 +129,8 @@ dmypy.json
 .pyre/
 
 #vs-code
-.idea
-.vscode
+.idea/*
+.vscode/*
 session.code-workspace
 
 
