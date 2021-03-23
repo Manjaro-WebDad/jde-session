@@ -1,0 +1,12 @@
+jde:
+  - /usr/share/jde/jde-desktop
+  - dunst
+  - wingpanel
+  - plank
+ 
+dex:
+  - dex -aev jade
+ 
+wm:
+  - gala
+
