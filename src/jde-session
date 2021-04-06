@@ -44,6 +44,14 @@ async def run(cmd, restart=False):
 
     stdout, stderr = await proc.communicate()
     returncode = f'{cmd} exited with code {proc.returncode}'
+    if proc.returncode != 0 and cmd == "gala":
+        fallback = load_settings().get("wm")[1]
+        subprocess.Popen(
+            ["notify-send",
+             "Something wen't wrong, the window manager has crashed, falling back to an alternative one"]
+            )
+        subprocess.Popen(fallback)
+        
     if log:
         log.info(returncode)
     else:
